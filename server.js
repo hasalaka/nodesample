@@ -4,11 +4,13 @@ var app = express();
 // Constants
 const PORT = 3000;
 const HOST = '0.0.0.0';
+let count = 0;
 
 // This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
    console.log("Got a GET request for the homepage");
-   res.send(`Hello GET Date=${new Date()}`);
+   count++;
+   res.send(`Hello GET Date=${new Date()} request#=${count}`);
 })
 
 // This responds a POST request for the homepage
