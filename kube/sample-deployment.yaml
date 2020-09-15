@@ -25,6 +25,8 @@ apiVersion: v1
 kind: Service
 metadata:
     name: nodesample-service
+    labels:
+      app: samplenode
 spec:
     type: NodePort
     selector:
